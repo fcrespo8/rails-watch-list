@@ -1,0 +1,27 @@
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand">WatchList</a>
+    <form class="d-flex">
+    <p><h3><%= link_to "Create new movie list", new_list_path %></h2></p>
+    </form>
+  </div>
+</nav>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fsobreelmundodelcine.com%2F2008%2F08%2F27%2Fpulp-fiction-una-portada-de-cine-negro%2F&psig=AOvVaw1mAAgZ0-DAGQIpDaVvYJEa&ust=1668786035218000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCPjOxMjGtfsCFQAAAAAdAAAAABAE" class="d-block w-100" alt="pulpfic">
+    </div>
+    <div class="carousel-item">
+      <img src="https://pics.filmaffinity.com/Reservoir_Dogs-650437795-large.jpg" class="d-block w-100" alt="reserv">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
+<h2>Lists</h2>
+<% @lists.each do |list| %>
+    <div>
+        <h2><%= link_to list.name, list_path(list) %></h2>
+    </div>
+<% end %>
